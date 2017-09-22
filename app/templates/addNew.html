@@ -1,0 +1,32 @@
+<div   ng-controller="AddNewController" class="addNew">
+
+	<form name="addForm" id="addForm">
+
+
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" class="form-control" name="username" placeholder="Username" ng-model="user.username" required>
+			<span class="error" ng-show=" addForm.username.$dirty && addForm.username.$invalid">Username is required.</span>
+		</div>
+
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="email" class="form-control" name="email" placeholder="Email" ng-model="user.email" required>
+			<span class="error" ng-show="addForm.email.$dirty && addForm.email.$invalid">The Email is required and need to be a valid email.</span>
+		</div>
+		
+
+		<div class="form-group">
+			<label for="phone">Phone</label>
+			<input type="number" class="form-control" name="phone" placeholder="Phone" ng-model="user.phone" required>
+			<span class="error" ng-show="addForm.phone.$dirty && addForm.phone.$invalid ">Phone is required.</span>
+		</div>
+
+
+
+		
+		<button type="submit" ng-disabled="addForm.$invalid" class="btn btn-default" id="sendUser">Crear Usuario</button>
+
+	</form>
+    
+</div>
